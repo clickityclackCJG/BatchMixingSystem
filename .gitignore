@@ -399,3 +399,9 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+# TwinCAT specific compilation and target files
+_CompileInfo/
+_Boot/
+*.compileinfo
+*.bootdata
+*.bnd
