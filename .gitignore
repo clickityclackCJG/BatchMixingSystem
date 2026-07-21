@@ -405,3 +405,4 @@ _Boot/
 *.compileinfo
 *.bootdata
 *.bnd
+*.~u
