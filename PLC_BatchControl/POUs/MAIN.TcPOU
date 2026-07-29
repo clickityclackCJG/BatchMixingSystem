@@ -1158,19 +1158,6 @@ END_VAR
                   <l2 n="Connectors" />
                   <v n="Id">81L</v>
                 </o>
-                <o>
-                  <v n="ILActive">false</v>
-                  <v n="FBDValid">false</v>
-                  <v n="ILValid">false</v>
-                  <l2 n="ILLines" />
-                  <v n="Comment">""</v>
-                  <v n="Title">""</v>
-                  <v n="Label">""</v>
-                  <v n="OutCommented">false</v>
-                  <l2 n="NetworkItems" />
-                  <l2 n="Connectors" />
-                  <v n="Id">82L</v>
-                </o>
               </l2>
               <v n="BranchCounter">0</v>
               <v n="ValidIds">true</v>

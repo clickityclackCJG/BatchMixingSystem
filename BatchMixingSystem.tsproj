@@ -2,6 +2,9 @@
 <TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4026.24">
 	<Project ProjectGUID="{715C51EA-9D35-F18F-22EF-994D90F60D62}" Target64Bit="true" ShowHideConfigurations="#x6">
 		<System>
+			<Settings MaxCpus="64" NonWinCpus="63">
+				<Cpu CpuId="3"/>
+			</Settings>
 			<Tasks>
 				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350" AdtTasks="true">
 					<Name>PlcTask</Name>
@@ -10,16 +13,24 @@
 		</System>
 		<Plc>
 			<Project GUID="{EB303091-8BF8-4EA7-B3F0-81D227C96360}" Name="PLC_BatchControl" PrjFilePath="PLC_BatchControl\PLC_BatchControl.plcproj" TmcFilePath="PLC_BatchControl\PLC_BatchControl.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{137DFDC5-B130-2389-5F30-493178D44BFB}" TmcPath="PLC_BatchControl\PLC_BatchControl.tmc">
 					<Name>PLC_BatchControl Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Contexts>
 						<Context>
-							<Id>1</Id>
-							<Name>Default</Name>
+							<Id>0</Id>
+							<Name>PlcTask</Name>
+							<ManualConfig>
+								<OTCID>#x02010030</OTCID>
+							</ManualConfig>
+							<Priority>20</Priority>
+							<CycleTime>10000000</CycleTime>
 						</Context>
 					</Contexts>
 					<JsonDynPous><![CDATA[null]]></JsonDynPous>
+					<TaskPouOids>
+						<TaskPouOid Prio="20" OTCID="#x08502001"/>
+					</TaskPouOids>
 				</Instance>
 			</Project>
 		</Plc>
